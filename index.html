@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tip calculator app">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Tip calculator app</title>
+
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script defer src="./assets/js/main.js"></script>
+
+</head>
+
+<body>
+  <div class="box">
+    <nav></nav>
+    <header>
+      <h1>Spli <br> tter</h1>
+    </header>
+    <main>
+      <section class="tip-calculator">
+        <form action="#" method="get" novalidate class="form">
+  
+          <div class="form__bill">
+            <div class="form__bill-wrapper">
+              <span class="form__bill-sign">$</span>
+              <input type="number" id="bill" class="form__bill-input" placeholder="0" inputmode="decimal" step="0.01"
+                min="0" max="99999" aria-label="Enter total bill amount, between 0 and 99999 dollars" aria-required="true"
+                required />
+            </div>
+            <label for="bill" class="form__bill-label">Bill</label>
+          </div>
+  
+          <div class="form__option">
+            <h2 class="form__bill-label">Select Tip %</h2>
+
+            <fieldset class="form__radio">
+              <div class="form__radio-w">
+                <input type="radio" id="tip-5" name="tip" value="5" class="form__radio-input" />
+                <label for="tip-5" class="form__radio-label">5%</label>
+              </div>
+  
+              <div class="form__radio-w">
+                <input type="radio" id="tip-10" name="tip" value="10" class="form__radio-input" />
+                <label for="tip-10" class="form__radio-label">10%</label>
+              </div>
+  
+  
+              <div class="form__radio-w">
+                <input type="radio" id="tip-15" name="tip" value="15" class="form__radio-input" />
+                <label for="tip-15" class="form__radio-label">15%</label>
+              </div>
+  
+              <div class="form__radio-w">
+                <input type="radio" id="tip-25" name="tip" value="25" class="form__radio-input" />
+                <label for="tip-25" class="form__radio-label">25%</label>
+              </div>
+  
+              <div class="form__radio-w">
+                <input type="radio" id="tip-50" name="tip" value="50" class="form__radio-input" />
+                <label for="tip-50" class="form__radio-label">50%</label>
+              </div>
+  
+              <div class="form__bill-wrapper">
+                <input type="number" id="tip-custom" name="tip" class="form__bill-input" placeholder="Custom" min="0"
+                  max="100" aria-label="Custom percentage" />
+              </div>
+            </fieldset>
+          </div>
+  
+          <div class="form__bill">
+            <div class="form__bill-wrapper">
+              <span class="form__bill-sign"><img src="./assets/images/icon-person.svg" alt="icon person"></span>
+              <input type="number" id="number-of-people" class="form__bill-input" placeholder="0" min="1" max="9999"
+                aria-label="Enter number of people" aria-required="true" step="1" inputmode="numeric" />
+            </div>
+            <label for="bill" class="form__bill-label">Number of People</label>
+          </div>
+        </form>
+  
+        <div class="output">
+          <div class="output__header">
+            <div class="output__header-w">
+              <h2>
+                <span class="tip-amount">Tip Amount</span>
+                <span class="person">/ person</span>
+              </h2>
+              <span class="amount" id="tip-amount">$0.00</span>
+            </div>
+            <div class="output__header-w">
+              <h2>
+                <span  class="tip-amount">Total</span>
+                <span class="person">/ person</span>
+              </h2>
+              <span class="amount" id="total-amount">$0.00</span>
+            </div>
+          </div>
+          <button type="button" class="output__reset-button" id="reset" aria-label="Reset inputs and calculated result"
+            disabled>Reset
+          </button>
+        </div>
+      </section>
+  
+    </main>
+  </div>
+</body>
+
+</html>
