@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Space Mono';
+    src: url('../fonts/SpaceMono-Bold.woff2') format('woff2'),
+        url('../fonts/SpaceMono-Bold.woff') format('woff'),
+        url('../fonts/SpaceMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --color-primary: #C5E4E7;
+    --color-text: #5E7A7D;
+    --color-white: #ffffff;
+    --color-light-blue: #F3F9FA;
+    --color-blue-gray: #00474B;
+    --color-blue-green: #0D686D;
+    --color-aquamarine: #26C2AE;
+    --color-light-aquamarine: #9FE8DF;
+    --color-green-dark: #204124;
+}
+
+body {
+    font-family: "Space Mono", monospace;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+
+    @media (min-width: 60rem) {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

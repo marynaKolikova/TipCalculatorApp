@@ -1,0 +1,218 @@
+.box {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @media (min-width: 60rem) {
+        flex: 100%;
+        max-width: 23.6875rem;
+        margin: 1rem;
+    }
+
+    &__bill {
+        display: flex;
+        flex-direction: column-reverse;
+
+        &-label {
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--color-light-blue);
+            border-radius: 5px;
+            border: 2px solid transparent;
+
+            &:hover {
+                border: 2px solid var(--color-light-aquamarine);
+            }
+
+            &:focus-within {
+                border: 2px solid var(--color-aquamarine);
+            }
+        }
+
+        &-sign {
+            font-size: 1.5rem;
+            line-height: 1.5;
+            color: var(--color-blue-gray);
+            opacity: .35;
+            padding-left: 1.1rem;
+        }
+
+        &-input {
+            background-color: var(--color-light-blue);
+            text-align: right;
+            padding: .36rem;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            color: var(--color-blue-gray);
+            border-radius: 5px;
+            outline: none;
+            width: 100%;
+            padding-right: 1.1rem;
+            cursor: pointer;
+
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            &::placeholder {
+                font-size: 1.5rem;
+                line-height: 1.5;
+                color: var(--color-blue-gray);
+                opacity: .35;
+                text-align: right;
+            }
+        }
+    }
+
+    &__radio {
+        border: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: 60rem) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &-input {
+            display: none;
+        }
+
+        &-w {
+            text-align: center;
+            min-width: 7rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            line-height: 1.5;
+            background-color: var(--color-blue-gray);
+            border-radius: 5px;
+            padding: 6px;
+            color: var(--color-white);
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--color-light-aquamarine);
+                color: var(--color-blue-gray);
+            }
+        }
+    }
+}
+
+.form__radio-w.selected {
+    background-color: var(--color-aquamarine);
+    color: var(--color-blue-gray);
+}
+
+// /////////////////////////////////////////////////////////////////////////
+
+.output {
+    background-color: var(--color-blue-gray);
+    border-radius: .95rem;
+    padding: 2.3rem 1.5rem 1.5rem 1.5rem;
+
+    @media (min-width: 60rem) {
+        flex: 100%;
+        max-width: 25.8125rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2.5rem;
+    }
+
+    &__reset-button {
+        width: 100%;
+        font-weight: 700;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        text-align: center;
+        color: var(--color-blue-gray);
+        text-transform: uppercase;
+        background-color: var(--color-blue-green);
+        padding: .5625rem 2rem;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+            background-color: var(--color-light-aquamarine);
+        }
+
+        &:active {
+            transform: scale(0.995);
+        }
+    }
+
+    h2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .tip-amount {
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.25;
+            color: var(--color-white);
+
+
+        }
+
+        .person {
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 19px;
+            color: #7F9D9F;
+
+        }
+
+    }
+
+    .amount {
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 1.46875rem;
+        text-align: right;
+        letter-spacing: -0.666667px;
+        color: #26C2AE;
+
+        @media (min-width: 60rem) {
+            font-size: 48px;
+            line-height: 71px;
+            letter-spacing: -1px;
+        }
+    }
+
+    &__header {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        @media (min-width: 60rem) {
+            gap: 2.56rem;
+        }
+
+
+        &-w {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

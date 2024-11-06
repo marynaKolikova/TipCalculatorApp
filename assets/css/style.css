@@ -14,6 +14,7 @@
   --color-aquamarine: #26C2AE;
   --color-light-aquamarine: #9FE8DF;
   --color-green-dark: #204124;
+  --accent-red: #FF6155;
 }
 
 body {
@@ -266,6 +267,21 @@ header h1 {
 .output__header-w {
   display: flex;
   justify-content: space-between;
+}
+
+.label {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#valid-email-required {
+  color: var(--accent-red);
+  visibility: hidden;
+}
+
+.form__bill-wrapper.border-red {
+  border-color: var(--accent-red);
 }
 
 /*# sourceMappingURL=style.css.map */
