@@ -47,8 +47,8 @@ customInput.addEventListener('focus', () => {
 });
 
 ////////////////////////////////////////////////////////////////////////
+let selectedTip;
 function getSelectedTip() {
-  let selectedTip;
   tipRadios.forEach((radio) => {
     if (radio.checked) {
       selectedTip = parseFloat(radio.value);
@@ -103,6 +103,14 @@ function resetCalculator() {
   totalAmountPerPersonAmount.textContent = '$0.00';
   resetButton.classList.remove("reset-active");
   resetButton.disabled = true;
+
+  tipRadios.forEach((radio) => {
+    radio.checked = false;
+  });
+
+  peopleInput.value = '';
+  selectedTip = 0;
+  
 }
 
 resetButton.addEventListener("click", resetCalculator);
